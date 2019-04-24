@@ -1,3 +1,113 @@
-body {
-    background-color: #eee;
+body { 
+    /* background: #a9d6bf; */
+    background: linear-gradient(to right, #70e0a2 0%, #8fd3b0 25%, #bbeae7 50%, #8fd3b0 75%, #70e0a2 100%);
+    text-align: left;
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
 }
+.container {
+    background: #fff;
+    margin: 50px auto auto;
+    width: 570px;
+    position: relative;
+    border-radius: 12px;
+    padding: 5px 5px 15px;
+}
+.container img {
+    max-width: 60px;
+    display: inline-block; 
+}
+.container-title {
+    background: linear-gradient(to bottom, #41C112 0%,#029b00 100%);
+    padding: 20px;
+    border-radius: 12px 12px 0 0;
+    color: #fff;
+} 
+.title {
+    padding: 0;
+    margin: 0;
+    font-size: 28px;
+    position: absolute;
+    right: 32px;
+    bottom: 237px;
+    display: inline-block; 
+    font-family: Georgia, serif;
+}
+.title-h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    position: absolute;
+    right: 32px;
+    bottom: 216px;
+    display: inline-block; 
+    font-family: Georgia, serif;
+}
+#calcolo .label {
+    font-weight: bold;
+    color: #090;
+    width: 120px;
+    font-size: 15px;
+    text-align: right;
+    margin-right: 5px;
+    text-transform: uppercase;
+}
+#calcolo input[type=text] {
+    line-height: 24px;
+    padding: 0 4px;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+#calcolo select {
+    font-size: 18px;
+}
+.cognome input[type="text"], .luogo input[type="text"] {
+    width: 370px;
+}
+#calcolo .field.nome .input input {
+    width: 231px;
+}
+.field.sesso .label {
+    text-align: left!important;
+    margin: 15px -65px 0 35px!important;
+ }
+.field > div {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 15px;
+}
+#provincia {
+    width: 40px;
+}
+.prov, .data, .nome, .sesso{
+    display: inline;
+}
+#form {
+    font-size: 18px;
+    margin: 20px auto;
+    padding: 0px;
+    width: 399px;
+}
+.form-input {
+    color: #fff;
+    /* background: #029b00; */
+    background: linear-gradient(to bottom, #41C112 0%,#029b00 100%);
+    border-radius: 12px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    width: 399px;
+    padding: 10px;
+}
+.form-input:hover {
+    background: linear-gradient(to bottom, #4de814 0%,#03ae00 100%);
+}
+
+
+
+
+/* Pagina Responsive: e dove trovarla */
+/* non qui :) */
