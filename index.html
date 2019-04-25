@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
+    <link rel="shortcut icon" href="http://www.codicefiscaleonline.com/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/dist/css/style.css">
 </head>
 
@@ -56,7 +57,7 @@
                         Luogo di nascita
                     </div>
                     <div class="input">
-                        <input type="text" name="luogo_di_nascita">
+                        <input type="text" name="luogo">
                     </div>
                 </div>
 
@@ -248,12 +249,18 @@
             </form>
         </div>
     </div>
-    <form action="" id="form">
+    <!-- <form action="" id="form">
         <input type="submit" name="calcola" value="Calcola il Codice Fiscale" class="form-input" onclick="getInfo()">
+    </form> -->
+    <form action="" id="form">
+        <input type="button" name="calcola" value="Calcola il Codice Fiscale" class="form-input" onclick="getInfo()">
     </form>
+    
 
 
     <script src="dist/js/main.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
 </body>
 
 </html>
