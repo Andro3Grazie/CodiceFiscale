@@ -110,22 +110,21 @@ body {
 }
 
 /* -------------------------------------------------------------- */
+.overlay {
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background: rgba(0, 0, 0, 0.7); /* opacizza lo sfondo */
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
 
 @media screen and (max-width: 1024px) {
 
-    .overlay {
-        position: fixed;
-        top: 0; bottom: 0; left: 0; right: 0;
-        background: rgba(0, 0, 0, 0.7); /* opacizza lo sfondo */
-        transition: opacity 500ms;
-        visibility: hidden;
-        opacity: 0;
-    }
     .overlay:target {
         visibility: visible;
         opacity: 1;
     }
-
     .popup {
         margin: 300px auto;
         padding: 20px;
@@ -169,6 +168,7 @@ body {
         cursor: pointer;
         width: 100px;
         padding: 10px;
+        color: #fff;
     }
     .popup-button-input:hover {
         background: linear-gradient(to bottom, #4de814 0%,#03ae00 100%);
