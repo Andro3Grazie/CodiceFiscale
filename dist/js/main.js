@@ -63,8 +63,263 @@ function getGiorno(params) {
 function getSesso() {
     return document.getElementsByName("sesso")[0].value;
 }
-function getComune() {
 
+var nome = [];
+var cc = [];
+var sigla = [];
+
+function getComune() {
+    var luogo = document.getElementsByName("luogo")[0].value;
+    var provincia = document.getElementsByName("provincia")[0].value;
+
+    var nome_output = nome.indexOf(luogo.toUpperCase());
+    var sigla_output = sigla.indexOf(provincia.toUpperCase());
+
+
+    if (nome_output != -1 && sigla_output != -1) {
+        cf += cc[nome.indexOf(luogo.toUpperCase())];
+    }
+    else {
+        cf = "IMPOSSIBILE TROVARE IL COMUNE";
+    }
+}
+function carattereDiVerifica() {
+    var oddChar = 0;
+
+    for (var i = 0; i < cf.length; i++) {
+        if (i % 2 != 0) {
+            switch (cf[i].toUpperCase()) {
+                case '0':
+                    oddChar += 1;
+                    break;
+                case '1':
+                    oddChar += 0;
+                    break;
+                case '2':
+                    oddChar += 5;
+                    break;
+                case '3':
+                    oddChar += 7;
+                    break;
+                case '4':
+                    oddChar += 9;
+                    break;
+                case '5':
+                    oddChar += 13;
+                    break;
+                case '6':
+                    oddChar += 15;
+                    break;
+                case '7':
+                    oddChar += 17;
+                    break;
+                case '8':
+                    oddChar += 19;
+                    break;
+                case '9':
+                    oddChar += 21;
+                    break;
+                case 'A':
+                    oddChar += 1;
+                    break;
+                case 'B':
+                    oddChar += 0;
+                    break;
+                case 'C':
+                    oddChar += 5;
+                    break;
+                case 'D':
+                    oddChar += 7;
+                    break;
+                case 'E':
+                    oddChar += 9;
+                    break;
+                case 'F':
+                    oddChar += 13;
+                    break;
+                case 'G':
+                    oddChar += 15;
+                    break;
+                case 'H':
+                    oddChar += 17;
+                    break;
+                case 'I':
+                    oddChar += 19;
+                    break;
+                case 'J':
+                    oddChar += 21;
+                    break;
+                case 'K':
+                    oddChar += 2;
+                    break;
+                case 'L':
+                    oddChar += 4;
+                    break;
+                case 'M':
+                    oddChar += 18;
+                    break;
+                case 'N':
+                    oddChar += 20;
+                    break;
+                case 'O':
+                    oddChar += 11;
+                    break;
+                case 'P':
+                    oddChar += 3;
+                    break;
+                case 'Q':
+                    oddChar += 6;
+                    break;
+                case 'R':
+                    oddChar += 8;
+                    break;
+                case 'S':
+                    oddChar += 12;
+                    break;
+                case 'T':
+                    oddChar += 14;
+                    break;
+                case 'U':
+                    oddChar += 16;
+                    break;
+                case 'V':
+                    oddChar += 10;
+                    break;
+                case 'W':
+                    oddChar += 22;
+                    break;
+                case 'X':
+                    oddChar += 25;
+                    break;
+                case 'Y':
+                    oddChar += 24;
+                    break;
+                case 'Z':
+                    oddChar += 23;
+                    break;
+                default:
+                    break;
+            }
+        }
+        else {
+            switch (cf[i].toUpperCase()) {
+                case '0':
+                    oddChar += 0;
+                    break;
+                case '1':
+                    oddChar += 1;
+                    break;
+                case '2':
+                    oddChar += 2;
+                    break;
+                case '3':
+                    oddChar += 3;
+                    break;
+                case '4':
+                    oddChar += 4;
+                    break;
+                case '5':
+                    oddChar += 5;
+                    break;
+                case '6':
+                    oddChar += 6;
+                    break;
+                case '7':
+                    oddChar += 7;
+                    break;
+                case '8':
+                    oddChar += 8;
+                    break;
+                case '9':
+                    oddChar += 9;
+                    break;
+                case 'A':
+                    oddChar += 0;
+                    break;
+                case 'B':
+                    oddChar += 1;
+                    break;
+                case 'C':
+                    oddChar += 2;
+                    break;
+                case 'D':
+                    oddChar += 3;
+                    break;
+                case 'E':
+                    oddChar += 4;
+                    break;
+                case 'F':
+                    oddChar += 5;
+                    break;
+                case 'G':
+                    oddChar += 6;
+                    break;
+                case 'H':
+                    oddChar += 7;
+                    break;
+                case 'I':
+                    oddChar += 8;
+                    break;
+                case 'J':
+                    oddChar += 9;
+                    break;
+                case 'K':
+                    oddChar += 10;
+                    break;
+                case 'L':
+                    oddChar += 11;
+                    break;
+                case 'M':
+                    oddChar += 12;
+                    break;
+                case 'N':
+                    oddChar += 13;
+                    break;
+                case 'O':
+                    oddChar += 14;
+                    break;
+                case 'P':
+                    oddChar += 15;
+                    break;
+                case 'Q':
+                    oddChar += 16;
+                    break;
+                case 'R':
+                    oddChar += 17;
+                    break;
+                case 'S':
+                    oddChar += 18;
+                    break;
+                case 'T':
+                    oddChar += 19;
+                    break;
+                case 'U':
+                    oddChar += 20;
+                    break;
+                case 'V':
+                    oddChar += 21;
+                    break;
+                case 'W':
+                    oddChar += 22;
+                    break;
+                case 'X':
+                    oddChar += 23;
+                    break;
+                case 'Y':
+                    oddChar += 24;
+                    break;
+                case 'Z':
+                    oddChar += 25;
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    console.log(oddChar);
+    var result = Math.floor(oddChar / 26);
+    console.log(result);
 }
 function getInfo() {
     cf = "";
@@ -74,6 +329,8 @@ function getInfo() {
     getMese();
     getGiorno();
     getComune();
+    carattereDiVerifica();
+
 
     printCF();
 }
@@ -82,8 +339,8 @@ function printCF() {
     if (x.matches) {
         document.getElementById("popup-content").innerHTML = cf.toUpperCase();
     } else {
-        document.getElementById("popup-content").innerHTML = cf.toUpperCase();
         console.log(cf.toUpperCase());
+
     }
 }
 function getCodiceCastale() {

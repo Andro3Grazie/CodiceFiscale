@@ -57,7 +57,8 @@
                         Luogo di nascita
                     </div>
                     <div class="input">
-                        <input type="text" name="luogo">
+                        <input type="text" name="luogo" id="luogon">
+                        <!-- <input list="datalist" name="luogo" id="luogon"> -->
                     </div>
                 </div>
 
@@ -254,6 +255,7 @@
         <input type="submit" name="calcola" value="Calcola il Codice Fiscale" class="form-input" onclick="getInfo()">
     </form> -->
 
+
     <!-- Rimuovere a sito ultimato -->
     <form action="" id="form">
         <a href="#popup1">
@@ -278,9 +280,19 @@
         </div>
     </div>
 
-    <script src="dist/js/main.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-
+    <script src="dist/js/main.js"></script>
+    <script>
+        window.onload = function () {
+            $.getJSON("data/comuni.json", function (data) {
+                $.each(data, function (key, val) {
+                    nome.push(val.nome.toUpperCase());
+                    cc.push(val.codiceCatastale);
+                    sigla.push(val.sigla);
+                });
+            });            
+        };
+    </script>
 </body>
 
 </html>

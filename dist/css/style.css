@@ -61,6 +61,15 @@ body {
     font-size: 18px;
     box-sizing: border-box;
 }
+/* sistemare */
+#calcolo input[list=datalist] { 
+    line-height: 24px;
+    padding: 0 4px;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 18px;
+    box-sizing: border-box;
+}
 #calcolo select {
     font-size: 18px;
 }
