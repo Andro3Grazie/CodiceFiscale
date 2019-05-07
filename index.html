@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Calcolo Codice Fiscale</title>
 
     <link rel="shortcut icon" href="http://www.codicefiscaleonline.com/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/dist/css/style.css">
@@ -249,14 +249,34 @@
             </form>
         </div>
     </div>
+
     <!-- <form action="" id="form">
         <input type="submit" name="calcola" value="Calcola il Codice Fiscale" class="form-input" onclick="getInfo()">
     </form> -->
-    <form action="" id="form">
-        <input type="button" name="calcola" value="Calcola il Codice Fiscale" class="form-input" onclick="getInfo()">
-    </form>
-    
 
+    <!-- Rimuovere a sito ultimato -->
+    <form action="" id="form">
+        <a href="#popup1">
+            <input type="button" name="calcola" value="Calcola il Codice Fiscale" class="form-input"
+                onclick="getInfo()">
+        </a>
+    </form>
+
+    <div id="popup1" class="overlay">
+        <!--Fatto-->
+        <div class="popup">
+            <!--Fatto-->
+            <h2 class="popup-title">Codice Fiscale</h2>
+            <a class="popup-close" href="#">&times;</a>
+            <div class="popup-result tab">
+                <strong id="popup-content">
+                </strong>
+            </div>
+            <div class="popup-button">
+                <input type="button" class="popup-button-input" value="CHIUDI" onclick="window.location = '#';">
+            </div>
+        </div>
+    </div>
 
     <script src="dist/js/main.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>

@@ -67,6 +67,7 @@ function getComune() {
 
 }
 function getInfo() {
+    cf = "";
     getCognome();
     getNome();
     getAnno();
@@ -79,15 +80,16 @@ function getInfo() {
 function printCF() {
     var x = window.matchMedia("(max-width: 700px)")
     if (x.matches) {
-        document.write(cf.toUpperCase());
+        document.getElementById("popup-content").innerHTML = cf.toUpperCase();
     } else {
+        document.getElementById("popup-content").innerHTML = cf.toUpperCase();
         console.log(cf.toUpperCase());
     }
 }
 function getCodiceCastale() {
     var luogo = document.getElementsByName("luogo")[0].value;
     var json = $.getJSON("data/comuni.json");
-    
+
 }
 function rimuoviSpazio(string) {
     return string.split(' ').join('');
