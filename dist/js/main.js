@@ -352,11 +352,6 @@ function printCF() {
 
     }
 }
-function getCodiceCastale() {
-    var luogo = document.getElementsByName("luogo")[0].value;
-    var json = $.getJSON("data/comuni.json");
-
-}
 function rimuoviSpazio(string) {
     return string.split(' ').join('');
 }

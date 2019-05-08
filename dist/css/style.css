@@ -183,6 +183,47 @@ body {
     }
 }
 
+/*Cookie Consent Begin*/
+#cookieConsent {
+    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 32px;
+    font-size: 15px;
+    color: #ccc;
+    line-height: 24px;
+    padding: 8px 30px 8px 30px;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#closeCookieConsent {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+#closeCookieConsent:hover {
+    color: #fff;
+}
+.cookieConsentOK {
+    float: right;
+    background: linear-gradient(to bottom, #41C112 0%,#029b00 100%);
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 3px 12px;
+    cursor: pointer;
+    margin: 15px 60px 10px 0;
+}
+.cookieConsentOK:hover {
+    background: linear-gradient(to bottom, #4de814 0%,#03ae00 100%);
+}
+
 
 /* Pagina Responsive: e dove trovarla */
 /* non qui :) */

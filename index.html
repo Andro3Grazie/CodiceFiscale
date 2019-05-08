@@ -281,6 +281,19 @@
         </div>
     </div>
 
+    <div id="cookieConsent">
+        <!-- <div id="closeCookieConsent">&times;</div> -->
+        <h3>Il numero generato corrisponde alle regole del <em>D.M.del 12.3.1974</em></h3>
+        Non si può avere l'assoluta certezza dell'esattezza del codice.
+        <br>
+        Nel raro caso in cui il sistema genera due codici identici,
+        <u>due persone con nome e cognome simili, nati nello stesso comune il medesimo giorno</u>,
+        il Ministero delle Finanze provvede alla sostituzione di uno dei numeri con una lettera progressiva.
+        <a class="cookieConsentOK">Me ne farò una ragione!</a>
+        <br>
+        <strong>Mi scuso per il disagio.</strong>
+    </div>
+
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="dist/js/main.js"></script>
     <script>
@@ -291,8 +304,16 @@
                     cc.push(val.codiceCatastale);
                     sigla.push(val.sigla);
                 });
-            });            
+            });
         };
+        $(document).ready(function () {
+            setTimeout(function () {
+                $("#cookieConsent").fadeIn(200);
+            }, 0);
+            $("#closeCookieConsent, .cookieConsentOK").click(function () {
+                $("#cookieConsent").fadeOut(200);
+            });
+        }); 
     </script>
 </body>
 
