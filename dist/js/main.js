@@ -84,10 +84,11 @@ function getComune() {
     }
 }
 function carattereDiVerifica() {
-    var oddChar = 0;
+    var oddChar = 0; //Dispari
+    var evenChar = 0; //Pari
 
     for (var i = 0; i < cf.length; i++) {
-        if (i % 2 != 0) {
+        if (i % 2 == 0) { //Dispari
             switch (cf[i].toUpperCase()) {
                 case '0':
                     oddChar += 1;
@@ -201,115 +202,115 @@ function carattereDiVerifica() {
                     break;
             }
         }
-        else {
+        else { //Pari
             switch (cf[i].toUpperCase()) {
                 case '0':
-                    oddChar += 0;
+                    evenChar += 0;
                     break;
                 case '1':
-                    oddChar += 1;
+                    evenChar += 1;
                     break;
                 case '2':
-                    oddChar += 2;
+                    evenChar += 2;
                     break;
                 case '3':
-                    oddChar += 3;
+                    evenChar += 3;
                     break;
                 case '4':
-                    oddChar += 4;
+                    evenChar += 4;
                     break;
                 case '5':
-                    oddChar += 5;
+                    evenChar += 5;
                     break;
                 case '6':
-                    oddChar += 6;
+                    evenChar += 6;
                     break;
                 case '7':
-                    oddChar += 7;
+                    evenChar += 7;
                     break;
                 case '8':
-                    oddChar += 8;
+                    evenChar += 8;
                     break;
                 case '9':
-                    oddChar += 9;
+                    evenChar += 9;
                     break;
                 case 'A':
-                    oddChar += 0;
+                    evenChar += 0;
                     break;
                 case 'B':
-                    oddChar += 1;
+                    evenChar += 1;
                     break;
                 case 'C':
-                    oddChar += 2;
+                    evenChar += 2;
                     break;
                 case 'D':
-                    oddChar += 3;
+                    evenChar += 3;
                     break;
                 case 'E':
-                    oddChar += 4;
+                    evenChar += 4;
                     break;
                 case 'F':
-                    oddChar += 5;
+                    evenChar += 5;
                     break;
                 case 'G':
-                    oddChar += 6;
+                    evenChar += 6;
                     break;
                 case 'H':
-                    oddChar += 7;
+                    evenChar += 7;
                     break;
                 case 'I':
-                    oddChar += 8;
+                    evenChar += 8;
                     break;
                 case 'J':
-                    oddChar += 9;
+                    evenChar += 9;
                     break;
                 case 'K':
-                    oddChar += 10;
+                    evenChar += 10;
                     break;
                 case 'L':
-                    oddChar += 11;
+                    evenChar += 11;
                     break;
                 case 'M':
-                    oddChar += 12;
+                    evenChar += 12;
                     break;
                 case 'N':
-                    oddChar += 13;
+                    evenChar += 13;
                     break;
                 case 'O':
-                    oddChar += 14;
+                    evenChar += 14;
                     break;
                 case 'P':
-                    oddChar += 15;
+                    evenChar += 15;
                     break;
                 case 'Q':
-                    oddChar += 16;
+                    evenChar += 16;
                     break;
                 case 'R':
-                    oddChar += 17;
+                    evenChar += 17;
                     break;
                 case 'S':
-                    oddChar += 18;
+                    evenChar += 18;
                     break;
                 case 'T':
-                    oddChar += 19;
+                    evenChar += 19;
                     break;
                 case 'U':
-                    oddChar += 20;
+                    evenChar += 20;
                     break;
                 case 'V':
-                    oddChar += 21;
+                    evenChar += 21;
                     break;
                 case 'W':
-                    oddChar += 22;
+                    evenChar += 22;
                     break;
                 case 'X':
-                    oddChar += 23;
+                    evenChar += 23;
                     break;
                 case 'Y':
-                    oddChar += 24;
+                    evenChar += 24;
                     break;
                 case 'Z':
-                    oddChar += 25;
+                    evenChar += 25;
                     break;
                 default:
                     break;
@@ -317,9 +318,17 @@ function carattereDiVerifica() {
         }
     }
 
-    console.log(oddChar);
-    var result = Math.floor(oddChar / 26);
-    console.log(result);
+    // console.log("Caratteri dispari = " + evenChar + "\nCaratteri pari = " + oddChar);
+
+    var result = oddChar + evenChar;
+    result = Math.floor(oddChar / 26);
+
+    // console.log("resto = " + result);
+    var letters = String.fromCharCode(result + 65);
+
+    // console.log("lettera = " + letters);
+
+    cf += letters;
 }
 function getInfo() {
     cf = "";
