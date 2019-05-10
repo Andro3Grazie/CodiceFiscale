@@ -80,13 +80,13 @@ function getComune() {
         cf += cc[nome.indexOf(luogo.toUpperCase())];
     }
     else {
-        cf = "IMPOSSIBILE TROVARE IL COMUNE";
+        cf = "IMPOSSIBILE TROVARE IL COMUNE!";
     }
 }
 function carattereDiVerifica() {
     var oddChar = 0; //Dispari
     var evenChar = 0; //Pari
-
+    
     for (var i = 0; i < cf.length; i++) {
         if (i % 2 == 0) { //Dispari
             switch (cf[i].toUpperCase()) {
@@ -320,12 +320,11 @@ function carattereDiVerifica() {
 
     // console.log("Caratteri dispari = " + evenChar + "\nCaratteri pari = " + oddChar);
 
-    var result = oddChar + evenChar;
-    result = Math.floor(oddChar / 26);
 
-    // console.log("resto = " + result);
+    var result = Math.floor((oddChar + evenChar) / 26)
+    result = (oddChar + evenChar) - (result * 26);
+
     var letters = String.fromCharCode(result + 65);
-
     // console.log("lettera = " + letters);
 
     cf += letters;
@@ -338,19 +337,24 @@ function getInfo() {
     getMese();
     getGiorno();
     getComune();
-    carattereDiVerifica();
+    if (cf != "IMPOSSIBILE TROVARE IL COMUNE!") {
+        carattereDiVerifica();
+    }
+    
 
 
     printCF();
 }
 function printCF() {
     var x = window.matchMedia("(max-width: 700px)")
-    if (x.matches) {
-        document.getElementById("popup-content").innerHTML = cf.toUpperCase();
-    } else {
-        console.log(cf.toUpperCase());
+    // if (x.matches) {
+    //     document.getElementById("popup-content").innerHTML = cf.toUpperCase();
+    // } else {
+    //     console.log(cf.toUpperCase());
 
-    }
+    // }
+
+    document.getElementById("popup-content").innerHTML = cf.toUpperCase();
 }
 function rimuoviSpazio(string) {
     return string.split(' ').join('');

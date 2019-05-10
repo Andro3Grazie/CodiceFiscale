@@ -260,7 +260,7 @@
     <!-- Rimuovere a sito ultimato -->
     <form action="" id="form">
         <a href="#popup1">
-            <input type="button" name="calcola" value="Calcola il Codice Fiscale" class="form-input"
+            <input type="button" name="calcola" id="bottone-marco" value="Calcola il Codice Fiscale" class="form-input"
                 onclick="getInfo()">
         </a>
     </form>
@@ -281,8 +281,7 @@
         </div>
     </div>
 
-    <div id="cookieConsent">
-        <!-- <div id="closeCookieConsent">&times;</div> -->
+    <div id="cookieConsent" hidden>
         <h3>Il numero generato corrisponde alle regole del <em>D.M.del 12.3.1974</em></h3>
         Non si può avere l'assoluta certezza dell'esattezza del codice.
         <br>
@@ -306,7 +305,7 @@
                 });
             });
         };
-        $(document).ready(function () {
+        $("#bottone-marco").click(function () {
             setTimeout(function () {
                 $("#cookieConsent").fadeIn(200);
             }, 0);
