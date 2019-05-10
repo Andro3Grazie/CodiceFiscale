@@ -12,6 +12,6 @@ Per il calcolo del codice fiscale si procede grossomodo così:
 - Codice del comune (quattro caratteri)
 - Carattere di controllo, per verificare la correttezza del codice fiscale.
 
-(per dettagli più precisi si veda codice fiscale su wikipedia)
+(per dettagli più precisi si veda codice fiscale su https://it.wikipedia.org/wiki/Codice_fiscale)
 
 È possibile che due persone abbiano lo stesso codice fiscale ma, in questo caso, l'Agenzia delle Entrate provvede a sostituire alcuni caratteri per risolvere l'ambiguità. Il presente calcolo online del codice fiscale segue le regole del DM del 12/03/1974, 
