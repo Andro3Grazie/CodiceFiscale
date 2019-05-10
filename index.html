@@ -253,19 +253,22 @@
     </div>
 
     <!-- <form action="" id="form">
-        <input type="submit" name="calcola" value="Calcola il Codice Fiscale" class="form-input" onclick="getInfo()">
+        <a href="#popup1">
+            <input type="submit" name="calcola" id="bottone-marco" value="Calcola il Codice Fiscale" class="form-input"
+                onclick="getInfo()">
+        </a>
     </form> -->
 
 
     <!-- Rimuovere a sito ultimato -->
     <form action="" id="form">
-        <a href="#popup1">
+        <a onclick="$('#popup1').show()">
             <input type="button" name="calcola" id="bottone-marco" value="Calcola il Codice Fiscale" class="form-input"
                 onclick="getInfo()">
         </a>
     </form>
 
-    <div id="popup1" class="overlay">
+    <div id="popup1" class="overlay" hidden>
         <!--Fatto-->
         <div class="popup">
             <!--Fatto-->
@@ -276,7 +279,7 @@
                 </strong>
             </div>
             <div class="popup-button">
-                <input type="button" class="popup-button-input" value="CHIUDI" onclick="window.location = '#';">
+                <input type="button" class="popup-button-input" value="CHIUDI" onclick="location.reload()">
             </div>
         </div>
     </div>
