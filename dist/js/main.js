@@ -340,8 +340,6 @@ function getInfo() {
     if (cf != "IMPOSSIBILE TROVARE IL COMUNE!") {
         carattereDiVerifica();
     }
-    
-
 
     printCF();
 }
