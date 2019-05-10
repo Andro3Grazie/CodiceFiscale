@@ -116,70 +116,66 @@ body {
     background: rgba(0, 0, 0, 0.7); /* opacizza lo sfondo */
     transition: opacity 500ms;
 }
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    margin: 300px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 3s ease-in-out;
+}
 
-/* @media screen and (max-width: 1024px) { */
+.popup-title {
+    margin-top: 0;
+    color: #090;
+    font-size: 30px
+}
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    transition: all 0ms;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.popup-close:hover {
+    color: #41C112;
+}
+.popup-button {
+    font-size: 18px;
+    margin: 0 auto;
+    margin-top: 35px;
+    padding: 0px;
+    width: 100px;
+}
+.popup-button-input {
+    background: linear-gradient(to bottom, #41C112 0%,#029b00 100%);
+    border-radius: 12px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100px;
+    padding: 10px;
+    color: #fff;
+}
+.popup-button-input:hover {
+    background: linear-gradient(to bottom, #4de814 0%,#03ae00 100%);
+}
+#popup-content {
+    font-size: 26px;
+    /* max-height: 30%; */
+    overflow: auto;
+    /* text-align: center; */
+    color: #000;
 
-    .overlay:target {
-        visibility: visible;
-        opacity: 1;
-    }
-    .popup {
-        margin: 300px auto;
-        padding: 20px;
-        background: #fff;
-        border-radius: 5px;
-        width: 70%;
-        position: relative;
-        transition: all 3s ease-in-out;
-    }
-
-    .popup-title {
-        margin-top: 0;
-        color: #090;
-        font-size: 30px
-    }
-    .popup-close {
-        position: absolute;
-        top: 15px;
-        right: 30px;
-        transition: all 0ms;
-        font-size: 40px;
-        font-weight: bold;
-        text-decoration: none;
-        color: #333;
-    }
-    .popup-close:hover {
-        color: #41C112;
-    }
-    .popup-button {
-        font-size: 18px;
-        margin: 0 auto;
-        margin-top: 35px;
-        padding: 0px;
-        width: 100px;
-    }
-    .popup-button-input {
-        background: linear-gradient(to bottom, #41C112 0%,#029b00 100%);
-        border-radius: 12px;
-        border: none;
-        font-size: 18px;
-        cursor: pointer;
-        width: 100px;
-        padding: 10px;
-        color: #fff;
-    }
-    .popup-button-input:hover {
-        background: linear-gradient(to bottom, #4de814 0%,#03ae00 100%);
-    }
-    #popup-content {
-        font-size: 26px;
-        /* max-height: 30%; */
-        overflow: auto;
-        /* text-align: center; */
-        color: #000;
-
-    }
-/* } */
+}
 
 /*Cookie Consent Begin*/
 #cookieConsent {
@@ -225,3 +221,8 @@ body {
 
 /* Pagina Responsive: e dove trovarla */
 /* non qui :) */
+@media screen and (max-width: 1024px) {
+    .popup {
+        width: 70%;
+    }
+}
