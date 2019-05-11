@@ -260,7 +260,7 @@
     </div>
 
     <form action="" id="form">
-        <a onclick="$('#popup1').show()">
+        <a >
             <input type="button" name="calcola" id="bottone-marco" value="Calcola il Codice Fiscale" class="form-input"
                 onclick="getInfo()">
         </a>
@@ -271,13 +271,13 @@
         <div class="popup">
             <!--Fatto-->
             <h2 class="popup-title">Codice Fiscale</h2>
-            <a class="popup-close" href="#">&times;</a>
+            <a class="popup-close" href="#" onclick="$('#popup1').hide()">&times;</a>
             <div class="popup-result">
                 <strong id="popup-content">
                 </strong>
             </div>
             <div class="popup-button">
-                <input type="button" class="popup-button-input" value="CHIUDI" onclick="location.reload()">
+                <input type="button" class="popup-button-input" value="Calcola un nuovo Codice Fiscale" onclick="location.reload()">
             </div>
         </div>
     </div>
@@ -289,7 +289,7 @@
         Nel raro caso in cui il sistema genera due codici identici,
         <u>due persone con nome e cognome simili, nati nello stesso comune il medesimo giorno</u>,
         il Ministero delle Finanze provvede alla sostituzione di uno dei numeri con una lettera progressiva.
-        <a class="cookieConsentOK">Me ne farò una ragione!</a>
+        <a class="cookieConsentOK">OK, ho capito.</a>
         <br>
         <strong>Mi scuso per il disagio.</strong>
     </div>
@@ -307,14 +307,6 @@
                 });
             });
         };
-        $("#bottone-marco").click(function () {
-            setTimeout(function () {
-                $("#cookieConsent").fadeIn(200);
-            }, 0);
-            $("#closeCookieConsent, .cookieConsentOK").click(function () {
-                $("#cookieConsent").fadeOut(200);
-            });
-        }); 
     </script>
 </body>
 

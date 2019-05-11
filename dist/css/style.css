@@ -149,11 +149,9 @@ body {
     color: #41C112;
 }
 .popup-button {
-    font-size: 18px;
-    margin: 0 auto;
-    margin-top: 35px;
     padding: 0px;
-    width: 100px;
+    margin: 35px 0 0;
+    text-align: center;
 }
 .popup-button-input {
     background: linear-gradient(to bottom, #41C112 0%,#029b00 100%);
@@ -161,9 +159,9 @@ body {
     border: none;
     font-size: 18px;
     cursor: pointer;
-    width: 100px;
     padding: 10px;
     color: #fff;
+    position: relative;
 }
 .popup-button-input:hover {
     background: linear-gradient(to bottom, #4de814 0%,#03ae00 100%);

@@ -1,13 +1,24 @@
 var cf = "";
+var emptySpace = false;
 function getCognome() {
     var cognome = document.getElementsByName("cognome")[0].value;
-    cognome = rimuoviSpazio(cognome);
-    consonanti(cognome, "m");
+    if (cognome.length != 0) {
+        cognome = rimuoviSpazio(cognome);
+        consonanti(cognome, "m");
+    }
+    else {
+        emptySpace = true;
+    }
 }
 function getNome() {
     var nome = document.getElementsByName("nome")[0].value;
-    nome = rimuoviSpazio(nome);
-    consonanti(nome, "n");
+    if (nome.length != 0) {
+        nome = rimuoviSpazio(nome);
+        consonanti(nome, "n");
+    }
+    else {
+        emptySpace = true;
+    }
 }
 function getAnno() {
     var anno = document.getElementsByName("adate")[0].value;
@@ -86,7 +97,7 @@ function getComune() {
 function carattereDiVerifica() {
     var oddChar = 0; //Dispari
     var evenChar = 0; //Pari
-    
+
     for (var i = 0; i < cf.length; i++) {
         if (i % 2 == 0) { //Dispari
             switch (cf[i].toUpperCase()) {
@@ -341,17 +352,22 @@ function getInfo() {
         carattereDiVerifica();
     }
 
-    printCF();
+    if (!emptySpace) {
+        $('#popup1').show();
+        $("#bottone-marco").click(function () {
+            setTimeout(function () {
+                $("#cookieConsent").fadeIn(200);
+            }, 0);
+            $("#closeCookieConsent, .cookieConsentOK").click(function () {
+                $("#cookieConsent").fadeOut(200);
+            });
+        });
+        printCF();
+    }else {
+        location.reload()
+    }
 }
 function printCF() {
-    var x = window.matchMedia("(max-width: 700px)")
-    // if (x.matches) {
-    //     document.getElementById("popup-content").innerHTML = cf.toUpperCase();
-    // } else {
-    //     console.log(cf.toUpperCase());
-
-    // }
-
     document.getElementById("popup-content").innerHTML = cf.toUpperCase();
 }
 function rimuoviSpazio(string) {
