@@ -83,6 +83,9 @@ function getComune() {
     var luogo = document.getElementsByName("luogo")[0].value;
     var provincia = document.getElementsByName("provincia")[0].value;
 
+    luogo = remove_spaces(luogo);
+    provincia = remove_spaces(provincia);
+
     var nome_output = nome.indexOf(luogo.toUpperCase());
     var sigla_output = sigla.indexOf(provincia.toUpperCase());
 
@@ -363,12 +366,15 @@ function getInfo() {
             });
         });
         printCF();
-    }else {
+    } else {
         location.reload()
     }
 }
 function printCF() {
     document.getElementById("popup-content").innerHTML = cf.toUpperCase();
+}
+function remove_spaces(string) {
+    return string.trim();
 }
 function rimuoviSpazio(string) {
     return string.split(' ').join('');
