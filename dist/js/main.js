@@ -356,19 +356,23 @@ function getInfo() {
     }
 
     if (!emptySpace) {
+        cookie();
+        $('#cookieConsent').show();
         $('#popup1').show();
-        $("#bottone-marco").click(function () {
-            setTimeout(function () {
-                $("#cookieConsent").fadeIn(200);
-            }, 0);
-            $("#closeCookieConsent, .cookieConsentOK").click(function () {
-                $("#cookieConsent").fadeOut(200);
-            });
-        });
         printCF();
     } else {
         location.reload()
     }
+}
+function cookie() {
+    $("#bottone-marco").click(function () {
+        setTimeout(function () {
+            $("#cookieConsent").fadeIn(400);
+        }, 0);
+        $("#closeCookieConsent, .cookieConsentOK").click(function () {
+            $("#cookieConsent").fadeOut(200);
+        });
+    });
 }
 function printCF() {
     document.getElementById("popup-content").innerHTML = cf.toUpperCase();
