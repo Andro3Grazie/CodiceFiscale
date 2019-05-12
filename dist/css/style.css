@@ -172,8 +172,40 @@ body {
     overflow: auto;
     /* text-align: center; */
     color: #000;
-
 }
+/* Easter Egg */
+.popup-easter {
+    margin: 300px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    max-width: 63%;
+    position: relative;
+    transition: all 3s ease-in-out;
+}
+.popup-close-easter {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    transition: all 0ms;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+.popup-close-easter:hover {
+    color: #41C112;
+}
+.popup-result-easter {
+    text-align: center;
+    margin: 0 0;
+}
+#ownerArt {
+    font-size: 16px;
+    font-family: monospace;
+    white-space: pre;
+}
+
 
 /*Cookie Consent Begin*/
 #cookieConsent {
