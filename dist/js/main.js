@@ -388,7 +388,7 @@ function easter() {
             return true;
         }
         else if (cf.toUpperCase() == "MLNLSS04L60H501W") {
-            console.log("Dream On  ~ Aerosmith");
+            console.log("Dream On ~ Aerosmith");
         }
     }
 
