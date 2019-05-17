@@ -381,9 +381,8 @@ function cookie() {
 function printCF() {
     document.getElementById("popup-content").innerHTML = cf.toUpperCase();
 }
-function easter() {
-    var x = window.matchMedia("(max-width: 1024px)");
-    if (!x.matches) {
+function easter() {    
+    if (window.innerWidth >= 1920) {
         if (cf.toUpperCase() == "MLILSN01P10H501H") {
             return true;
         }
@@ -391,9 +390,6 @@ function easter() {
             console.log("Dream On ~ Aerosmith");
         }
     }
-
-
-
 }
 function remove_spaces(string) {
     return string.trim();
