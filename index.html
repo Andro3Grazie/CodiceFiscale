@@ -36,7 +36,7 @@
                         Cognome
                     </div>
                     <div class="input">
-                        <input type="text" name="cognome">
+                        <input class="inputs" type="text" name="cognome">
                     </div>
                 </div>
 
@@ -45,7 +45,7 @@
                         Nome
                     </div>
                     <div class="input">
-                        <input type="text" name="nome">
+                        <input class="inputs" type="text" name="nome">
                     </div>
                 </div>
                 <div class="field sesso">
@@ -53,7 +53,7 @@
                         Sesso
                     </div>
                     <div class="input">
-                        <select name="sesso" id="">
+                        <select name="sesso" class="inputs">
                             <option value="m" selected>M</option>
                             <option value="f">F</option>
                         </select>
@@ -65,7 +65,7 @@
                         Luogo di nascita
                     </div>
                     <div class="input">
-                        <input type="text" name="luogo" id="luogon">
+                        <input class="inputs" type="text" name="luogo" id="luogon">
                         <!-- <input list="datalist" name="luogo" id="luogon"> -->
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                         Provincia (sigla)
                     </div>
                     <div class="input">
-                        <input type="text" name="provincia" id="provincia" maxlength="2">
+                        <input class="inputs" type="text" name="provincia" id="provincia" maxlength="2">
                     </div>
                 </div>
 
@@ -84,7 +84,7 @@
                         Data di nascita
                     </div>
                     <div class="input">
-                        <select name="gdate" id="">
+                        <select class="inputs" name="gdate">
                             <option value="01">01</option>
                             <option value="02">02</option>
                             <option value="03">03</option>
@@ -117,7 +117,7 @@
                             <option value="30">30</option>
                             <option value="31">31</option>
                         </select>
-                        <select name="mdate" id="">
+                        <select class="inputs" name="mdate">
                             <option value="01">01</option>
                             <option value="02">02</option>
                             <option value="03">03</option>
@@ -131,7 +131,7 @@
                             <option value="11">11</option>
                             <option value="12">12</option>
                         </select>
-                        <select name="adate">
+                        <select class="inputs" name="adate">
                             <option value="1900">1900</option>
                             <option value="1901">1901</option>
                             <option value="1902">1902</option>
@@ -260,9 +260,9 @@
     </div>
 
     <form id="form">
-        <a >
-            <input type="button" name="calcola" id="bottone-marco" value="Calcola il Codice Fiscale" class="form-input"
-                onclick="getInfo()">
+        <a>
+            <input type="button" name="calcola" id="bottone-marco" value="Calcola il Codice Fiscale"
+                class="form-input inputs" onclick="getInfo()">
         </a>
     </form>
 
@@ -277,7 +277,8 @@
                 </strong>
             </div>
             <div class="popup-button">
-                <input type="button" class="popup-button-input" value="Calcola un nuovo Codice Fiscale" onclick="location.reload()">
+                <input type="button" class="popup-button-input" value="Calcola un nuovo Codice Fiscale"
+                    onclick="location.reload()">
             </div>
         </div>
     </div>
@@ -295,7 +296,7 @@ $$$$$$$$ |$$ |$$  __$$\ $$  _____|$$  _____| \____$$\ $$  __$$\ $$  __$$ |$$  __
 $$  __$$ |$$ |$$$$$$$$ |\$$$$$$\  \$$$$$$\   $$$$$$$ |$$ |  $$ |$$ /  $$ |$$ |  \__|$$ /  $$ |      $$ \$$$  $$ |$$ |$$$$$$$$ |$$ |$$ |
 $$ |  $$ |$$ |$$   ____| \____$$\  \____$$\ $$  __$$ |$$ |  $$ |$$ |  $$ |$$ |      $$ |  $$ |      $$ |\$  /$$ |$$ |$$   ____|$$ |$$ |
 $$ |  $$ |$$ |\$$$$$$$\ $$$$$$$  |$$$$$$$  |\$$$$$$$ |$$ |  $$ |\$$$$$$$ |$$ |      \$$$$$$  |      $$ | \_/ $$ |$$ |\$$$$$$$\ $$ |$$ |
-\__|  \__|\__| \_______|\_______/ \_______/  \_______|\__|  \__| \_______|\__|       \______/       \__|     \__|\__| \_______|\__|\__| 
+\__|  \__|\__| \_______|\_______/ \_______/  \_______|\__|  \__| \_______|\__|       \______/       \__|     \__|\__| \_______|\__|\__|
                     </div>
                 </strong>
             </div>
@@ -309,7 +310,7 @@ $$ |  $$ |$$ |\$$$$$$$\ $$$$$$$  |$$$$$$$  |\$$$$$$$ |$$ |  $$ |\$$$$$$$ |$$ |  
         Nel raro caso in cui il sistema genera due codici identici,
         <u>due persone con nome e cognome simili, nati nello stesso comune il medesimo giorno</u>,
         il Ministero delle Finanze provvede alla sostituzione di uno dei numeri con una lettera progressiva.
-        <a class="cookieConsentOK">OK, ho capito.</a>
+        <a class="cookieConsentOK" onclick="$('#cookieConsent').hide()">OK, ho capito.</a>
         <br>
         <strong>Mi scuso per il disagio.</strong>
     </div>
@@ -328,6 +329,12 @@ $$ |  $$ |$$ |\$$$$$$$\ $$$$$$$  |$$$$$$$  |\$$$$$$$ |$$ |  $$ |\$$$$$$$ |$$ |  
                 });
             });
         };
+        $('.inputs').keydown(function (e) {
+            if (e.which === 13) {
+                var index = $('.inputs').index(this) + 1;
+                $('.inputs').eq(index).focus();
+            }
+        });
     </script>
 </body>
 
