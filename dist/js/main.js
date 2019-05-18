@@ -373,15 +373,15 @@ function cookie() {
         setTimeout(function () {
             $("#cookieConsent").fadeIn(400);
         }, 0);
-        $("#closeCookieConsent, .cookieConsentOK").click(function () {
-            $("#cookieConsent").fadeOut(200);
-        });
+        // $("#closeCookieConsent, .cookieConsentOK").click(function () {
+        //     $("#cookieConsent").fadeOut(200);
+        // });
     });
 }
 function printCF() {
     document.getElementById("popup-content").innerHTML = cf.toUpperCase();
 }
-function easter() {    
+function easter() {
     if (window.innerWidth >= 1920) {
         if (cf.toUpperCase() == "MLILSN01P10H501H") {
             return true;
@@ -390,6 +390,9 @@ function easter() {
             console.log("Dream On ~ Aerosmith");
         }
     }
+
+
+
 }
 function remove_spaces(string) {
     return string.trim();
